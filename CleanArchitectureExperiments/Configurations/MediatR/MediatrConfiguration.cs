@@ -10,6 +10,7 @@ namespace CleanArchitectureExperiments.Configurations.MediatR
         public static void AddApiMediatR(this IServiceCollection services)
         {
             services.AddMediatR(typeof(SaveNewClientCommand).Assembly);
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RetryPipelineBehavior<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingPipelineBehavior<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationPipelineBehavior<,>));
         }
