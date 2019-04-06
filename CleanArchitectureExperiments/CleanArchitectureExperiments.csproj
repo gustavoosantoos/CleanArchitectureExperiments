@@ -13,4 +13,8 @@
     <PackageReference Include="NSwag.AspNetCore" Version="12.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchitectureExperiments.Application\CleanArchitectureExperiments.Application.csproj" />
+  </ItemGroup>
+
 </Project>
