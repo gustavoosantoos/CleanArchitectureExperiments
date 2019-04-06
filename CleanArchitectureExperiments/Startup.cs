@@ -1,4 +1,5 @@
-﻿using CleanArchitectureExperiments.Configurations;
+﻿using CleanArchitectureExperiments.Configurations.MediatR;
+using CleanArchitectureExperiments.Configurations.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -19,6 +20,7 @@ namespace CleanArchitectureExperiments
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddApiSwagger();
+            services.AddApiMediatR();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CleanArchitectureExperiments.Configurations
+namespace CleanArchitectureExperiments.Configurations.Swagger
 {
     public static class SwaggerConfiguration
     {
