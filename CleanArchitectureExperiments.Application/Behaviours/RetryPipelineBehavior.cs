@@ -21,7 +21,7 @@ namespace CleanArchitectureExperiments.Application.Behaviours
             if (result.Outcome == OutcomeType.Successful)
                 return result.Result;
 
-            throw new Exception("Deu ruim nos retry.");
+            throw result.FinalException;
         }
     }
 }

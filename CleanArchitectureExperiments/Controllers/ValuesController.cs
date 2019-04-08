@@ -19,14 +19,10 @@ namespace CleanArchitectureExperiments.Controllers
             _mediator = mediator;
         }
 
-        [HttpPost("id")]
-        public async Task<ActionResult> Get(int id)
+        [HttpPost]
+        public async Task<ActionResult> Get(SaveNewClientCommand command)
         {
-            await _mediator.Send(new SaveNewClientCommand()
-            {
-                Id = id
-            });
-
+            await _mediator.Send(command);
             return Ok();
         }
     }
